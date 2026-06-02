@@ -1,0 +1,342 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@500&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-variant": "#353534",
+            "inverse-on-surface": "#313030",
+            "tertiary-container": "#8e8bc2",
+            "on-error": "#690005",
+            "on-secondary-fixed-variant": "#661aa3",
+            "tertiary": "#c4c1fb",
+            "on-primary-fixed-variant": "#6900b3",
+            "primary-fixed": "#f0dbff",
+            "secondary-fixed-dim": "#dfb7ff",
+            "background": "#131313",
+            "surface-container-high": "#2a2a2a",
+            "on-secondary-fixed": "#2d0050",
+            "surface-bright": "#3a3939",
+            "on-secondary-container": "#d5a4ff",
+            "error": "#ffb4ab",
+            "surface-dim": "#131313",
+            "surface-tint": "#ddb7ff",
+            "on-tertiary-container": "#262354",
+            "on-tertiary-fixed-variant": "#444173",
+            "on-primary-fixed": "#2c0051",
+            "surface": "#131313",
+            "on-background": "#e5e2e1",
+            "surface-container-low": "#1c1b1b",
+            "on-primary-container": "#400071",
+            "inverse-primary": "#842bd2",
+            "inverse-surface": "#e5e2e1",
+            "on-tertiary-fixed": "#181445",
+            "on-secondary": "#4a007f",
+            "on-surface-variant": "#cfc2d6",
+            "secondary": "#dfb7ff",
+            "primary-container": "#b76dff",
+            "tertiary-fixed": "#e3dfff",
+            "surface-container": "#201f1f",
+            "secondary-container": "#691ea6",
+            "on-primary": "#490080",
+            "outline-variant": "#4d4354",
+            "surface-container-lowest": "#0e0e0e",
+            "secondary-fixed": "#f1dbff",
+            "error-container": "#93000a",
+            "surface-container-highest": "#353534",
+            "on-surface": "#e5e2e1",
+            "primary-fixed-dim": "#ddb7ff",
+            "outline": "#988d9f",
+            "on-tertiary": "#2d2a5b",
+            "on-error-container": "#ffdad6",
+            "tertiary-fixed-dim": "#c4c1fb",
+            "primary": "#ddb7ff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "margin-desktop": "64px",
+            "section-gap": "120px",
+            "container-max": "1280px",
+            "gutter": "24px",
+            "margin-mobile": "16px",
+            "base": "8px"
+          },
+          "fontFamily": {
+            "headline-lg": ["Space Grotesk"],
+            "label-sm": ["JetBrains Mono"],
+            "label-md": ["JetBrains Mono"],
+            "display-xl": ["Space Grotesk"],
+            "body-md": ["Inter"],
+            "headline-md": ["Space Grotesk"],
+            "headline-lg-mobile": ["Space Grotesk"],
+            "body-lg": ["Inter"]
+          },
+          "fontSize": {
+            "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+            "label-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+            "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500"}],
+            "display-xl": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+            "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+            "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+            "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+            "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      background-color: #080808;
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(221, 183, 255, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 100% 100%, rgba(132, 43, 210, 0.03) 0%, transparent 50%);
+      color: #e5e2e1;
+      overflow-x: hidden;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .glass-card:hover {
+      transform: translateY(-12px) scale(1.02);
+      border-color: rgba(168, 85, 247, 0.4);
+      box-shadow: 0 0 30px rgba(168, 85, 247, 0.15);
+    }
+
+    .neon-border-gradient {
+      border-image: linear-gradient(to bottom right, rgba(168, 85, 247, 0.4), transparent) 1;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #ddb7ff;
+      border-radius: 10px;
+    }
+
+    .filter-tab.active {
+      background: rgba(221, 183, 255, 0.1);
+      color: #ddb7ff;
+      box-shadow: inset 0 0 10px rgba(221, 183, 255, 0.2);
+    }
+
+    .floating-anim {
+      animation: floating 6s ease-in-out infinite;
+    }
+
+    @keyframes floating {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+<body class="font-body-md text-on-background selection:bg-primary/30 selection:text-primary min-h-screen">
+<!-- TopNavBar (Shared Component) -->
+<nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] max-w-container-max rounded-full border border-white/10 bg-surface/30 backdrop-blur-xl shadow-[0_0_20px_rgba(221,183,255,0.1)] flex justify-between items-center px-gutter py-base z-50 transition-all duration-300">
+<div class="text-headline-md font-headline-md text-primary tracking-tighter">LEKS.DEV</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors hover:bg-white/5 hover:backdrop-blur-2xl px-3 py-1 rounded-full" href="hero.html">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors hover:bg-white/5 hover:backdrop-blur-2xl px-3 py-1 rounded-full" href="about.html">About</a>
+<a class="font-label-md text-label-md text-primary font-bold border-b-2 border-primary pb-1" href="projects.html">Projects</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors hover:bg-white/5 hover:backdrop-blur-2xl px-3 py-1 rounded-full" href="contact.html">Contact</a>
+</div>
+<a href="contact.html" class="bg-primary px-6 py-2 rounded-full text-on-primary font-label-md text-label-md hover:bg-primary-container hover:scale-105 active:scale-95 transition-all inline-block no-underline">
+      Connect
+    </a>
+</nav>
+<main class="relative pt-40 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Header Section -->
+<header class="mb-section-gap text-center">
+<h1 class="font-display-xl text-display-xl md:font-display-xl md:text-display-xl text-on-surface mb-6 bg-clip-text text-transparent bg-gradient-to-r from-on-surface via-primary to-on-surface-variant">
+        Forged in the Void
+      </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto opacity-80">
+        A collection of high-performance digital artifacts, spanning mobile ecosystems and web frontiers. Explore the technical documentation of each mission.
+      </p>
+</header>
+<!-- Project Filters -->
+<section class="flex flex-wrap justify-center gap-4 mb-16">
+<button class="filter-tab active font-label-md text-label-md px-8 py-3 rounded-full border border-outline-variant/30 glass-card transition-all duration-300" onclick="filterProjects('All')">
+        All
+      </button>
+<button class="filter-tab font-label-md text-label-md px-8 py-3 rounded-full border border-outline-variant/30 glass-card transition-all duration-300" onclick="filterProjects('Mobile')">
+        Mobile
+      </button>
+<button class="filter-tab font-label-md text-label-md px-8 py-3 rounded-full border border-outline-variant/30 glass-card transition-all duration-300" onclick="filterProjects('Web')">
+        Web
+      </button>
+<button class="filter-tab font-label-md text-label-md px-8 py-3 rounded-full border border-outline-variant/30 glass-card transition-all duration-300" onclick="filterProjects('UI Design')">
+        UI Design
+      </button>
+</section>
+<!-- Projects Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+<!-- Project Card 1: Web -->
+<article class="project-card glass-card rounded-xl overflow-hidden flex flex-col group" data-category="Web">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A sophisticated web application interface showcasing real-time data visualization with glowing purple line charts on a deep charcoal background. The interface features glassmorphism panels, crisp typography in white, and a futuristic dashboard layout designed for high-end technical monitoring. The lighting is moody with subtle atmospheric neon blooms." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATkMBGOLpYJFia8VG8pypYtoPMTf7XFiSPI0kaDvcf7QpTFcpvkq67DtV2aTdsPe0pL2MB5Og_McNMxI7IBvMQ-8YOCRfe3yPY4G0sDO6Mk09nIm86LKFQ7TQChoMtPmxQKLmUxA00zjRzZqmZpy7PXJqTyqHjp6lRK_dMx9q4MQlnAlKl7M-b3r14B1SDvGV3h8mdwoGD1CtqeuMnQUMHFJ3qB5v1raDC4V1p8XmZPZdoofuA275EW-Qv3G0LbYL4Crkm4XnYlA">
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60"></div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex gap-2 mb-4">
+<span class="font-label-sm text-label-sm bg-primary/10 text-primary px-3 py-1 rounded">React</span>
+<span class="font-label-sm text-label-sm bg-primary/10 text-primary px-3 py-1 rounded">Node.js</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Nebula Dashboard</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow opacity-70">
+            Real-time analytics engine for decentralized cloud networks, featuring 3D visualization and predictive modeling.
+          </p>
+<button class="w-full font-label-md text-label-md bg-transparent border border-primary text-primary py-4 rounded-lg flex items-center justify-center gap-2 hover:bg-primary hover:text-on-primary transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(221,183,255,0.4)]">
+            View Case Study
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Project Card 2: Mobile -->
+<article class="project-card glass-card rounded-xl overflow-hidden flex flex-col group" data-category="Mobile">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A mobile app screen design for a crypto wallet, featuring a vibrant purple and violet gradient background with glassmorphic asset cards. The screen displays a digital balance and a sleek navigation bar with Material design icons. The aesthetic is ultra-modern, high-contrast, and tailored for a mobile smartphone display." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1nEBJI_qVnKg_QRdNkHLjG_4M8kIUxfn0kSW6teJ-kpVV41wvgNGftT-hR7YFczLWLRBeasuJG0WZ7M_xLqrPB42P4UWSf9iGWSjh4TE6d3cFFhMp3kZ6IcKotu2Re2WqxmfWkMqD2NMYfGcb43ZCFJRI--VGO1hVhvHP2yJsCukBhn0zjJI5PDtTbZaEzRB_8kaYnYGFWYluCmifmGT4UQT4XeI2yS7fFn9MA7ogLk9NFp8j6eP7EXUd2wCXv1q_w1LAZoeSqQ">
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60"></div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex gap-2 mb-4">
+<span class="font-label-sm text-label-sm bg-primary/10 text-primary px-3 py-1 rounded">Flutter</span>
+<span class="font-label-sm text-label-sm bg-primary/10 text-primary px-3 py-1 rounded">Web3</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Void Wallet</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow opacity-70">
+            Zero-knowledge cryptocurrency wallet designed for secure, anonymous asset management in the multiversal ecosystem.
+          </p>
+<button class="w-full font-label-md text-label-md bg-transparent border border-primary text-primary py-4 rounded-lg flex items-center justify-center gap-2 hover:bg-primary hover:text-on-primary transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(221,183,255,0.4)]">
+            View Case Study
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Project Card 3: UI Design -->
+<article class="project-card glass-card rounded-xl overflow-hidden flex flex-col group" data-category="UI Design">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A detailed UI design exploration for a sci-fi gaming HUD. The layout shows intricate geometric shapes, technical readouts, and holographic elements in neon purple and cyan. The background is a pitch-black cosmic void, emphasizing the high-contrast elements and the professional digital craftsmanship of the interface design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQ92HagPsaVqALXg_ubhDe-93OqBBYnTrWc8vbhTSPUdTtCmWFbqi2tUjmtZaSCJV8ERx2098Y8LSKicL_eC-6SJlfrDVjPKsrXFKWI8YXNyMkyx3a09Ndy0DWTx6x0FeUlKV1Uv1bY8E9Z35aayOw81nLLjLS2WnGrgwjVA2n2RS8JolXgaKekCDItyqpcGRlHImmC74JNyHSM21fP6PlBM1jt2fQXbaeZ7WgzOF6H8h__F1dcwS24q8IXgjg5Iyg0V-FCHUBsA">
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60"></div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex gap-2 mb-4">
+<span class="font-label-sm text-label-sm bg-primary/10 text-primary px-3 py-1 rounded">Figma</span>
+<span class="font-label-sm text-label-sm bg-primary/10 text-primary px-3 py-1 rounded">Motion</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Astra Interface</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow opacity-70">
+            A comprehensive design system for space-exploration simulation software, focusing on high-density information display.
+          </p>
+<button class="w-full font-label-md text-label-md bg-transparent border border-primary text-primary py-4 rounded-lg flex items-center justify-center gap-2 hover:bg-primary hover:text-on-primary transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(221,183,255,0.4)]">
+            View Case Study
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Project Card 4: Web -->
+<article class="project-card glass-card rounded-xl overflow-hidden flex flex-col group" data-category="Web">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A minimalist e-commerce web design featuring luxury items against a deep, dark grey background. The layout uses high-end typography and asymmetrical grids, with thin purple glowing borders separating content sections. The style is sophisticated, professional, and visually quiet, using ample whitespace and premium product photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC71mk13c83LIwKiMucTpNB2kWkOI3I8LjqotkEW4q0oXJbRFoGLcl4UriFMdBKkKjKsGzIdghOvQc1v4teM9YlfrlR3zlNZpsHAhChm73izhXZoURZrehLD_MEXyXp-oRjnmREnCfp0qGo5MvqvueSRdDeJZ3nfN4dn0jAMpVX88e_Cm7YDCQitj3FxZzgMETdevduaT-iecw193Ws3a3_8Zef54foL0TDg7iIGq-W7_RQpHT2lRDmNPLi4I9VYa-Jbma2XCUuww">
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60"></div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex gap-2 mb-4">
+<span class="font-label-sm text-label-sm bg-primary/10 text-primary px-3 py-1 rounded">Next.js</span>
+<span class="font-label-sm text-label-sm bg-primary/10 text-primary px-3 py-1 rounded">Tailwind</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Eclipse Store</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow opacity-70">
+            Headless commerce platform for digital-first apparel brands, optimized for high conversion and low latency.
+          </p>
+<button class="w-full font-label-md text-label-md bg-transparent border border-primary text-primary py-4 rounded-lg flex items-center justify-center gap-2 hover:bg-primary hover:text-on-primary transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(221,183,255,0.4)]">
+            View Case Study
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</article>
+</div>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full py-section-gap border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-center px-margin-desktop max-w-container-max mx-auto bg-transparent">
+<div class="font-headline-md text-headline-md text-primary mb-4 md:mb-0">LEKS.DEV</div>
+<div class="flex gap-8 mb-4 md:mb-0">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary hover:drop-shadow-[0_0_8px_rgba(223,183,255,0.8)] transition-all" href="#">GitHub</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary hover:drop-shadow-[0_0_8px_rgba(223,183,255,0.8)] transition-all" href="#">LinkedIn</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary hover:drop-shadow-[0_0_8px_rgba(223,183,255,0.8)] transition-all" href="#">Twitter</a>
+</div>
+<div class="font-label-sm text-label-sm text-secondary opacity-60">© 2024 LEKS.DEV. Built in the void.</div>
+</footer>
+<script>
+    function filterProjects(category) {
+      const cards = document.querySelectorAll('.project-card');
+      const tabs = document.querySelectorAll('.filter-tab');
+
+      // Update active tab styling
+      tabs.forEach(tab => {
+        if (tab.innerText === category) {
+          tab.classList.add('active');
+        } else {
+          tab.classList.remove('active');
+        }
+      });
+
+      // Filter logic with animation
+      cards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'scale(0.95)';
+        
+        setTimeout(() => {
+          if (category === 'All' || card.getAttribute('data-category') === category) {
+            card.style.display = 'flex';
+            setTimeout(() => {
+              card.style.opacity = '1';
+              card.style.transform = 'scale(1)';
+            }, 50);
+          } else {
+            card.style.display = 'none';
+          }
+        }, 300);
+      });
+    }
+
+    // Scroll Header effect
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('nav');
+      if (window.scrollY > 20) {
+        nav.classList.add('scale-95', 'translate-y-2');
+      } else {
+        nav.classList.remove('scale-95', 'translate-y-2');
+      }
+    });
+
+    // Particle-like background interaction (Lightweight micro-interaction)
+    document.addEventListener('mousemove', (e) => {
+      const mouseX = e.clientX / window.innerWidth;
+      const mouseY = e.clientY / window.innerHeight;
+      document.body.style.backgroundPosition = `${mouseX * 20}px ${mouseY * 20}px`;
+    });
+  </script>
+
+
+</body></html>

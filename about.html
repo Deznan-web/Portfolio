@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LEKS.DEV | About</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#353534",
+                        "inverse-on-surface": "#313030",
+                        "tertiary-container": "#8e8bc2",
+                        "on-error": "#690005",
+                        "on-secondary-fixed-variant": "#661aa3",
+                        "tertiary": "#c4c1fb",
+                        "on-primary-fixed-variant": "#6900b3",
+                        "primary-fixed": "#f0dbff",
+                        "secondary-fixed-dim": "#dfb7ff",
+                        "background": "#131313",
+                        "surface-container-high": "#2a2a2a",
+                        "on-secondary-fixed": "#2d0050",
+                        "surface-bright": "#3a3939",
+                        "on-secondary-container": "#d5a4ff",
+                        "error": "#ffb4ab",
+                        "surface-dim": "#131313",
+                        "surface-tint": "#ddb7ff",
+                        "on-tertiary-container": "#262354",
+                        "on-tertiary-fixed-variant": "#444173",
+                        "on-primary-fixed": "#2c0051",
+                        "surface": "#131313",
+                        "on-background": "#e5e2e1",
+                        "surface-container-low": "#1c1b1b",
+                        "on-primary-container": "#400071",
+                        "inverse-primary": "#842bd2",
+                        "inverse-surface": "#e5e2e1",
+                        "on-tertiary-fixed": "#181445",
+                        "on-secondary": "#4a007f",
+                        "on-surface-variant": "#cfc2d6",
+                        "secondary": "#dfb7ff",
+                        "primary-container": "#b76dff",
+                        "tertiary-fixed": "#e3dfff",
+                        "surface-container": "#201f1f",
+                        "secondary-container": "#691ea6",
+                        "on-primary": "#490080",
+                        "outline-variant": "#4d4354",
+                        "surface-container-lowest": "#0e0e0e",
+                        "secondary-fixed": "#f1dbff",
+                        "error-container": "#93000a",
+                        "surface-container-highest": "#353534",
+                        "on-surface": "#e5e2e1",
+                        "primary-fixed-dim": "#ddb7ff",
+                        "outline": "#988d9f",
+                        "on-tertiary": "#2d2a5b",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#c4c1fb",
+                        "primary": "#ddb7ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "section-gap": "120px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Space Grotesk"],
+                        "label-sm": ["JetBrains Mono"],
+                        "label-md": ["JetBrains Mono"],
+                        "display-xl": ["Space Grotesk"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Space Grotesk"],
+                        "headline-lg-mobile": ["Space Grotesk"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "display-xl": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            overflow-x: hidden;
+        }
+        .glass-panel {
+            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(221, 183, 255, 0.1);
+        }
+        .neon-glow:hover {
+            box-shadow: 0 0 20px rgba(221, 183, 255, 0.3);
+        }
+        .radial-progress {
+            transform: rotate(-90deg);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #ddb7ff;
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+        .glow-dot {
+            animation: pulse-glow 2s infinite;
+        }
+    </style>
+</head>
+<body class="custom-scrollbar">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] max-w-container-max rounded-full border border-white/10 bg-surface/30 backdrop-blur-xl shadow-[0_0_20px_rgba(221,183,255,0.1)] flex justify-between items-center px-gutter py-base z-50">
+<div class="text-headline-md font-headline-md text-primary tracking-tighter">LEKS.DEV</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors hover:bg-white/5 hover:backdrop-blur-2xl px-3 py-1 rounded-full" href="hero.html">Home</a>
+<a class="font-label-md text-label-md text-primary font-bold border-b-2 border-primary pb-1" href="about.html">About</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors hover:bg-white/5 hover:backdrop-blur-2xl px-3 py-1 rounded-full" href="projects.html">Projects</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors hover:bg-white/5 hover:backdrop-blur-2xl px-3 py-1 rounded-full" href="contact.html">Contact</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-md text-label-md hover:scale-95 active:scale-90 transition-all purple-bloom">
+            Connect
+        </button>
+</nav>
+<!-- CONTENT CANVAS -->
+<main class="relative pt-32 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto space-y-section-gap">
+<!-- ABOUT SECTION -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start" id="about">
+<div class="lg:col-span-7 space-y-8">
+<div class="space-y-4">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-[0.2em] block">Architecting the Void</span>
+<h1 class="font-headline-lg text-headline-lg text-on-surface">Mission Specialist &amp; <br/><span class="text-primary">Full-Stack Engineer</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                        I bridge the gap between astronomical complexity and elegant simplicity. As a multi-stack specialist, I engineer high-performance systems using Flutter for multi-platform reach, Python for data intelligence, and Spring Boot for industrial-strength backends. My focus is on creating digital experiences that feel as vast and precise as the cosmos itself.
+                    </p>
+</div>
+<!-- VERTICAL TIMELINE -->
+<div class="relative pl-8 space-y-12 before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-px before:bg-gradient-to-b before:from-primary before:to-transparent">
+<div class="relative">
+<div class="absolute -left-[37px] top-1 w-4 h-4 rounded-full bg-primary glow-dot"></div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">The Launchpad</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant mb-2 block">2018 — Early Exploration</span>
+<p class="font-body-md text-body-md text-on-surface-variant">Started the journey with core algorithmic foundations and native development, mastering the building blocks of data structures and web architectures.</p>
+</div>
+<div class="relative">
+<div class="absolute -left-[37px] top-1 w-4 h-4 rounded-full border-2 border-primary bg-background"></div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Interstellar Scaling</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant mb-2 block">2020 — Multi-Stack Expansion</span>
+<p class="font-body-md text-body-md text-on-surface-variant">Deep-dived into Spring Boot microservices and Flutter ecosystem, delivering enterprise-grade mobile solutions for international clients.</p>
+</div>
+<div class="relative">
+<div class="absolute -left-[37px] top-1 w-4 h-4 rounded-full border-2 border-primary bg-background"></div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Orbital Dominance</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant mb-2 block">2023 — Present Day</span>
+<p class="font-body-md text-body-md text-on-surface-variant">Synthesizing AI-driven Python backends with sophisticated design-led frontends. Orchestrating complex cloud-native infrastructures in the deep void.</p>
+</div>
+</div>
+</div>
+<!-- PROFILE VISUAL -->
+<div class="lg:col-span-5 sticky top-32">
+<div class="glass-panel rounded-xl p-4 rotate-3 hover:rotate-0 transition-transform duration-700 aspect-square overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent z-10 pointer-events-none"></div>
+<img src="profile.jpg" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="A professional full-stack developer portrait with a futuristic twist, featuring subtle neon purple reflections on their glasses. The background is a dark, atmospheric studio setup with blurred digital interface projections in shades of deep violet and slate. The lighting is dramatic and moody, capturing a high-tech astronomical cyber-professional aesthetic with sharp focus and cinematic depth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6fI9M9301pEiR8ACSpihqwWs_GGVpVm9ZYLdWilvtdOHB6oDpx6Hc1tH1n4CBSyP1BADOWWXb6ZIdHpMOjj8pbFCz4hZiGloe3uX_F9vex0R5cht2Az9pwgd6OvKPEY5Iiut7byVZS7o4s1wCjy2wwG4ESJXlkvSjCNz4hINovKDMUnmVzUEinZJlG4hZZPJetYcX6N826loOdSMToHaxv93bx83fwe6R05DzFU5AtPook7-Q0YKhmYwRuSOU4cC-Z5VSqIsJGw"/>
+</div>
+</div>
+</section>
+<!-- TECH STACK SECTION -->
+<section class="space-y-gutter" id="tech-stack">
+<div class="flex flex-col md:flex-row justify-between items-end gap-4 border-b border-white/10 pb-8">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Propulsion <span class="text-primary">Systems</span></h2>
+<p class="font-label-md text-label-md text-on-surface-variant max-w-sm text-right">The core engine technologies powering my digital exploration.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap- gutter">
+<!-- TECH CARDS -->
+<div class="group relative glass-panel rounded-xl p-6 flex flex-col items-center justify-center gap-4 hover:bg-white/5 transition-all duration-300 hover:-translate-y-2 neon-glow">
+<span class="material-symbols-outlined text-[48px] text-primary group-hover:scale-110 transition-transform">flutter</span>
+<span class="font-label-md text-label-md">Flutter</span>
+<div class="absolute inset-0 bg-background opacity-0 group-hover:opacity-100 p-4 flex items-center justify-center text-center transition-opacity rounded-xl">
+<p class="font-label-sm text-label-sm text-primary">Cross-platform UI mastery for iOS/Android/Web.</p>
+</div>
+</div>
+<div class="group relative glass-panel rounded-xl p-6 flex flex-col items-center justify-center gap-4 hover:bg-white/5 transition-all duration-300 hover:-translate-y-2 neon-glow">
+<span class="material-symbols-outlined text-[48px] text-primary group-hover:scale-110 transition-transform">terminal</span>
+<span class="font-label-md text-label-md">Python</span>
+<div class="absolute inset-0 bg-background opacity-0 group-hover:opacity-100 p-4 flex items-center justify-center text-center transition-opacity rounded-xl">
+<p class="font-label-sm text-label-sm text-primary">Advanced data processing and automation scripts.</p>
+</div>
+</div>
+<div class="group relative glass-panel rounded-xl p-6 flex flex-col items-center justify-center gap-4 hover:bg-white/5 transition-all duration-300 hover:-translate-y-2 neon-glow">
+<span class="material-symbols-outlined text-[48px] text-primary group-hover:scale-110 transition-transform">database</span>
+<span class="font-label-md text-label-md">Spring Boot</span>
+<div class="absolute inset-0 bg-background opacity-0 group-hover:opacity-100 p-4 flex items-center justify-center text-center transition-opacity rounded-xl">
+<p class="font-label-sm text-label-sm text-primary">Robust, scalable microservices architectures.</p>
+</div>
+</div>
+<div class="group relative glass-panel rounded-xl p-6 flex flex-col items-center justify-center gap-4 hover:bg-white/5 transition-all duration-300 hover:-translate-y-2 neon-glow">
+<span class="material-symbols-outlined text-[48px] text-primary group-hover:scale-110 transition-transform">code</span>
+<span class="font-label-md text-label-md">JS / TS</span>
+<div class="absolute inset-0 bg-background opacity-0 group-hover:opacity-100 p-4 flex items-center justify-center text-center transition-opacity rounded-xl">
+<p class="font-label-sm text-label-sm text-primary">Dynamic interactions and complex state management.</p>
+</div>
+</div>
+<div class="group relative glass-panel rounded-xl p-6 flex flex-col items-center justify-center gap-4 hover:bg-white/5 transition-all duration-300 hover:-translate-y-2 neon-glow">
+<span class="material-symbols-outlined text-[48px] text-primary group-hover:scale-110 transition-transform">brush</span>
+<span class="font-label-md text-label-md">Figma</span>
+<div class="absolute inset-0 bg-background opacity-0 group-hover:opacity-100 p-4 flex items-center justify-center text-center transition-opacity rounded-xl">
+<p class="font-label-sm text-label-sm text-primary">High-fidelity UI/UX prototyping and design systems.</p>
+</div>
+</div>
+<div class="group relative glass-panel rounded-xl p-6 flex flex-col items-center justify-center gap-4 hover:bg-white/5 transition-all duration-300 hover:-translate-y-2 neon-glow">
+<span class="material-symbols-outlined text-[48px] text-primary group-hover:scale-110 transition-transform">html</span>
+<span class="font-label-md text-label-md">HTML/CSS</span>
+<div class="absolute inset-0 bg-background opacity-0 group-hover:opacity-100 p-4 flex items-center justify-center text-center transition-opacity rounded-xl">
+<p class="font-label-sm text-label-sm text-primary">Semantic structure and performance optimization.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- SKILLS RADIAL SECTION -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter" id="skills">
+<div class="glass-panel p-8 rounded-xl space-y-6 flex flex-col items-center group">
+<div class="relative w-32 h-32">
+<svg class="w-full h-full radial-progress" viewbox="0 0 100 100">
+<circle class="text-white/5" cx="50" cy="50" fill="transparent" r="40" stroke="currentColor" stroke-width="8"></circle>
+<circle class="text-primary transition-all duration-1000" cx="50" cy="50" fill="transparent" r="40" stroke="currentColor" stroke-dasharray="251.2" stroke-dashoffset="25.12" stroke-linecap="round" stroke-width="8"></circle>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center font-label-md text-label-md text-primary">90%</div>
+</div>
+<div class="text-center">
+<h4 class="font-headline-md text-headline-md mb-1">Mobile</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Flutter Expert</p>
+</div>
+</div>
+<div class="glass-panel p-8 rounded-xl space-y-6 flex flex-col items-center group">
+<div class="relative w-32 h-32">
+<svg class="w-full h-full radial-progress" viewbox="0 0 100 100">
+<circle class="text-white/5" cx="50" cy="50" fill="transparent" r="40" stroke="currentColor" stroke-width="8"></circle>
+<circle class="text-primary transition-all duration-1000" cx="50" cy="50" fill="transparent" r="40" stroke="currentColor" stroke-dasharray="251.2" stroke-dashoffset="37.68" stroke-linecap="round" stroke-width="8"></circle>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center font-label-md text-label-md text-primary">85%</div>
+</div>
+<div class="text-center">
+<h4 class="font-headline-md text-headline-md mb-1">Backend</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Spring / Python</p>
+</div>
+</div>
+<div class="glass-panel p-8 rounded-xl space-y-6 flex flex-col items-center group">
+<div class="relative w-32 h-32">
+<svg class="w-full h-full radial-progress" viewbox="0 0 100 100">
+<circle class="text-white/5" cx="50" cy="50" fill="transparent" r="40" stroke="currentColor" stroke-width="8"></circle>
+<circle class="text-primary transition-all duration-1000" cx="50" cy="50" fill="transparent" r="40" stroke="currentColor" stroke-dasharray="251.2" stroke-dashoffset="50.24" stroke-linecap="round" stroke-width="8"></circle>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center font-label-md text-label-md text-primary">80%</div>
+</div>
+<div class="text-center">
+<h4 class="font-headline-md text-headline-md mb-1">Frontend</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">React / Tailwind</p>
+</div>
+</div>
+<div class="glass-panel p-8 rounded-xl space-y-6 flex flex-col items-center group">
+<div class="relative w-32 h-32">
+<svg class="w-full h-full radial-progress" viewbox="0 0 100 100">
+<circle class="text-white/5" cx="50" cy="50" fill="transparent" r="40" stroke="currentColor" stroke-width="8"></circle>
+<circle class="text-primary transition-all duration-1000" cx="50" cy="50" fill="transparent" r="40" stroke="currentColor" stroke-dasharray="251.2" stroke-dashoffset="62.8" stroke-linecap="round" stroke-width="8"></circle>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center font-label-md text-label-md text-primary">75%</div>
+</div>
+<div class="text-center">
+<h4 class="font-headline-md text-headline-md mb-1">Design</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Figma / UI Systems</p>
+</div>
+</div>
+</section>
+</main>
+<!-- FOOTER SHELL -->
+<footer class="w-full py-section-gap border-t border-outline-variant/30 bg-transparent">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop max-w-container-max mx-auto gap-8">
+<div class="font-headline-md text-headline-md text-primary">CosmosDev</div>
+<p class="font-label-sm text-label-sm text-secondary">© 2024 CosmosDev. Built in the void.</p>
+<div class="flex gap-6">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary hover:drop-shadow-[0_0_8px_rgba(223,183,255,0.8)] transition-all" href="#">GitHub</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary hover:drop-shadow-[0_0_8px_rgba(223,183,255,0.8)] transition-all" href="#">LinkedIn</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary hover:drop-shadow-[0_0_8px_rgba(223,183,255,0.8)] transition-all" href="#">Twitter</a>
+</div>
+</div>
+</footer>
+<!-- INTERACTION SCRIPTS -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Subtle parallax effect on cards
+            const cards = document.querySelectorAll('.glass-panel');
+            window.addEventListener('mousemove', (e) => {
+                const mouseX = e.clientX / window.innerWidth;
+                const mouseY = e.clientY / window.innerHeight;
+                
+                cards.forEach(card => {
+                    const rect = card.getBoundingClientRect();
+                    const cardX = rect.left + rect.width / 2;
+                    const cardY = rect.top + rect.height / 2;
+                    
+                    const moveX = (e.clientX - cardX) * 0.01;
+                    const moveY = (e.clientY - cardY) * 0.01;
+                    
+                    if (card.classList.contains('neon-glow')) {
+                        card.style.transform = `translate(${moveX}px, ${moveY}px)`;
+                    }
+                });
+            });
+
+            // Smooth scroll for nav links
+            document.querySelectorAll('nav a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    // Only prevent default for internal anchor links
+                    if(href.startsWith('#')) {
+                        e.preventDefault();
+                        const targetId = href;
+                        if(targetId === '#') return;
+                        const element = document.querySelector(targetId);
+                        if(element) {
+                            element.scrollIntoView({
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                    // Allow navigation to other pages
+                });
+            });
+        });
+    </script>
+</body></html>
